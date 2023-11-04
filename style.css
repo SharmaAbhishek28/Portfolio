@@ -65,8 +65,7 @@ nav ul li a:hover::after{
     margin-top: 10px;
 }
 .header-text h1 span{
-    color: #6979F8
-    ;
+    color: #6979F8;
 }
 .about-me{
     width: 60%;
@@ -153,10 +152,68 @@ nav ul li a:hover::after{
     overflow: hidden;
     width: 310px;
     height: 280px;
+    
 }
 /* image ka height and width */
 .work img{
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s;    /*for delayed transition*/
+    
+}
+
+/* text on the images */
+.layer{
+    width: 290px;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #6979F8);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+/* text on image property */
+.layer h3{
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+/* .layer p{
+    margin-top: 10px;
+    padding-right: 10px;
+} */
+/* link icon */
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+/* image zoom in */
+.work:hover{
+    /*scale krne kr liye */
+    transform: scale(1.1);
+} 
+/* content on image ko hover karane ke liye */
+.work:hover .layer{
+    height: 100%;
 }
