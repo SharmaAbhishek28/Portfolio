@@ -243,7 +243,7 @@ nav ul li a:hover::after{
     
 }
 .contact-right{
-    margin: 30px;
+    margin-top: 100px;
     flex-basis: 50%;    /*width ke liye */
     
 }
@@ -262,5 +262,38 @@ nav ul li a:hover::after{
 }
 
 .social-icons a:hover{
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
+/* -------submit button no space for bt2---- */
+.btn.btn2{
+    display: inline-block;
+    background: #6979F8;
+    font-size: 18px;
+}
+
+/* -----------right form------- */
+.contact-right form{
+    width: 100%;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #323233;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* to reduce the size between submit button and the form */
+ form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+ }
