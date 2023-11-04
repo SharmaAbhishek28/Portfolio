@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="ImG/Abhishek..png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+                <li><a href="#">Projects</a></li>
+                <!-- <li><a href="#">Portfolio</a></li> -->
+                <li><a href="#">Explore</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <!-- for animated text -->
+            <span id="element"></span>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed('#element', {
+                  strings: ['UX/UI Designer', 'AR/VR Developer', 'Web Developer', 'Sketch-Artist'],
+                  typeSpeed: 70,
+                  loop: true, // Add the loop option to make it repeat
+                });
+              </script>
+
+        
+            <h1>Hi, I'm <br><span>Abhishek Sharma</span></h1>
+        </div>
+        <div class="about-me">
+            <p>I'm a 19 year old student currently studying Information Technology at AKGEC Ghaziabad.<br>I’m always looking for opportunities to work on new projects, participate in a hackathon or do anything fun! feel free to <a href="">reach out!</a></p>
+        </div>
+    </div>
+    
+</div>
+
+<!----------------------about------------->
+
+<!-- <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="ImG/b.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                
+                <div class="tab-titles">
+                    <p class="tab-links">Skills</p>
+                    <p class="tab-links">Education</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="ImG/img942.png">
+            </div>
+            <div class="work">
+                <img src="ImG/img22.jpg">
+            </div>
+            <div class="work">
+                <img src="ImG/221.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
