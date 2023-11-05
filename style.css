@@ -79,6 +79,7 @@ nav ul li a:hover::after{
     font-size: 20px;
     font-weight: 100;
     color: #fff;
+    text-align: justify;
 }
 /* link modification inside p section of home */
 .about-me p a{
@@ -297,3 +298,113 @@ form input, form textarea{
     cursor: pointer;
 
  }
+ .thank{
+    width: 100%;
+    text-align: center;
+    background: #323233;
+    padding: 25px 0;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+/* for displaying the menu icon and close icon */
+nav .fas{
+    display: none;
+}
+
+
+ /* ---------------------css for small screen------------------------------------- */
+@media only screen and (max-width: 600px) {
+    #header{
+        background-image: url(ImG/f34.png);
+        
+    }
+
+    /* for texts */
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 25px;
+        width: 200px;
+    }
+    .about-me{
+        width: 300px;
+        margin-top: 10px;
+
+    }
+    .about-me p{
+        text-align: justify;
+        font-size: 12px;
+        font-weight: 5;
+    }
+    .logo{
+        margin-top: 10px;
+        width: 70px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #6979F8;
+        position: fixed;
+        top: 0;
+        right: 470px;
+        width: 200px;
+        height: 95vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav .fas{
+        display: block;
+        font-size: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 90%;
+    }
+    
+    .sub-title{
+        position: relative;
+        top: 25px;
+        left: 0;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 90%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .thank{
+        font-size: 14px;
+    }
+    .contact-right{
+        margin-top: 20px;
+    }
+}

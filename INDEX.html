@@ -12,13 +12,15 @@
     <div class="container">
         <nav>
             <img src="ImG/Abhishek..png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <!-- <li><a href="#">About</a></li> -->
                 <li><a href="#">Portfolio</a></li>
                 <!-- <li><a href="#">Portfolio</a></li> -->
                 <li><a href="#">Contact</a></li>
+                <img src="ImG/icons8-close-30.png" class="fas" width="25px" onclick="closemenu()">
             </ul>
+            <img src="ImG/icons8-menu-48.png" class="fas" width="25px" onclick="openmenu()">
         </nav>
         <div class="header-text">
             <!-- for animated text -->
@@ -126,8 +128,23 @@
             </div>
         </div>
     </div>
+    <div class="thank">
+        <p>Thank You for Visiting! <br>&copy; 2023 Abhishek Sharma</p>
+    </div>
 </div>
 
+
+<script>
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "650px";
+}
+
+function closemenu() {
+    sidemenu.style.right = "470px";
+}
+</script>
 
 
 </body>
