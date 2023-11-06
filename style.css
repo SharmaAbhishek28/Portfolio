@@ -312,6 +312,48 @@ nav .fas{
     display: none;
 }
 
+/* css animation */
+/* CSS for puzzle piece shapes */
+.animate-puzzle {
+    background: linear-gradient(60deg, #956209, #232223);
+    background-size: 150% 150%;
+    animation: gradientAnimation 5s ease infinite;
+    clip-path: polygon(
+        20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%
+    );
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* CSS for up arrow */
+#bottom-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Change 'left' to 'right' */
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#upArrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+#upArrow:hover {
+    transform: rotate(180deg);
+}
+
+
+
 
  /* ---------------------css for small screen------------------------------------- */
 @media only screen and (max-width: 600px) {

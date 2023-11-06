@@ -35,7 +35,7 @@
               </script>
 
         
-            <h1>Hi, I'm <br><span>Abhishek Sharma</span></h1>
+            <h1>Hi, I'm <br><span id="name">Abhishek Sharma</span></h1>
         </div>
         <div class="about-me">
             <p>As a 19-year-old currently enrolled in the Information Technology program at AKGEC Ghaziabad, I'm actively seeking opportunities to collaborate on fresh projects, participate in hackathons, and have a blast while doing so! Feel free to contact me if you'd like to connect.</p>
@@ -108,6 +108,12 @@
             </div>
         </div>
     </div>
+    
+<!-- Bottom to Top Icon -->
+<div id="bottom-to-top">
+    <a href="#" id="scrollToTop"><img src="ImG/icons8-up-arrow-64.png" alt="Back to Top" width="40"></a>
+</div>
+
     <div class="thank">
         <p>Thank You for Visiting! <br>&copy; 2023 Abhishek Sharma</p>
     </div>
@@ -124,6 +130,103 @@ function openmenu() {
 function closemenu() {
     sidemenu.style.right = "470px";
 }
+
+
+// JavaScript to handle scrolling to sections when the links are clicked
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the navigation links
+    var portfolioLink = document.querySelector("a[href='#portfolio']");
+    var contactLink = document.querySelector("a[href='#contact']");
+
+    // Add click event listeners to the links
+    portfolioLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        scrollToSection("portfolio");
+    });
+
+    contactLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        scrollToSection("contact");
+    });
+
+    // Function to scroll to the specified section
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+});
+
+//for background animation
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the name element and other sections
+    var nameElement = document.getElementById("name");
+    var otherSections = document.querySelectorAll("section");
+
+    // Add hover event listener to the name element
+    nameElement.addEventListener("mouseover", function() {
+        // Add a class to trigger the puzzle animation
+        nameElement.classList.add("animate-puzzle");
+    });
+
+    nameElement.addEventListener("mouseout", function() {
+        // Remove the puzzle animation class when the mouse leaves
+        nameElement.classList.remove("animate-puzzle");
+    });
+
+    // Add a class to disable animation for other sections
+    otherSections.forEach(function(section) {
+        section.addEventListener("mouseover", function() {
+            nameElement.classList.remove("animate-puzzle");
+        });
+    });
+});
+
+// bottom to top feature
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the bottom-to-top icon and the "scrollToTop" link
+    var bottomToTopIcon = document.getElementById("bottom-to-top");
+    var upArrowIcon = document.getElementById("upArrow");
+
+    // Function to show/hide the bottom-to-top icon based on scroll position
+    function toggleBottomToTopIcon() {
+        // Get the position of the "Contact" section
+        var contactSection = document.getElementById("contact");
+        var contactSectionPosition = contactSection.getBoundingClientRect();
+
+        // Calculate the position when the icon should be visible
+        var visibilityPosition = contactSectionPosition.top + contactSectionPosition.height / 2;
+
+        if (window.scrollY >= visibilityPosition) {
+            bottomToTopIcon.style.display = "block";
+        } else {
+            bottomToTopIcon.style.display = "none";
+        }
+    }
+
+    // Function to scroll to the top
+    function scrollToTop() {
+        // Scroll to the top instantly
+        window.scrollTo(0, 0);
+    }
+
+    // Add scroll event listener to toggle the icon visibility
+    window.addEventListener("scroll", toggleBottomToTopIcon);
+
+    // Add click event listener to the icon
+    upArrowIcon.addEventListener("click", function(event) {
+        event.preventDefault();
+        // Scroll to the top instantly
+        scrollToTop();
+    });
+
+    // Initial icon visibility check
+    toggleBottomToTopIcon();
+});
+
+
 </script>
 
 
