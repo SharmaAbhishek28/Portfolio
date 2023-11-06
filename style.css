@@ -140,6 +140,7 @@ nav ul li a:hover::after{
 
 /* grid banna */
 .work-list {
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
